@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const size = {
+export const size = {
   small: "small",
   medium: "medium",
   large: "large"
 };
 
-const status = {
+export const status = {
   aguardandoAprovacao: "Aguardando Aprovação",
   aprovado: "Aprovado",
   embalando: "Embalando",
@@ -15,7 +15,7 @@ const status = {
   entregue: "Entregue"
 };
 
-const Situation = props => (
+export const Situation = props => (
   <span className={`situation situation-${props.size}`}>{props.status}</span>
 );
 
@@ -24,9 +24,7 @@ Situation.propTypes = {
   status: PropTypes.oneOf(Object.keys(status))
 };
 
-// Este trecho permite que uma variável chamada "size" (externa) ao componente tenha as
-// características do objeto interno "size" do próprio componente.
-Situation.size = size;
-Situation.status = status;
+// Situation.size = size;
+// Situation.status = status;
 
-export default Situation;
+//export default Situation;

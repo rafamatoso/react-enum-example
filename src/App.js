@@ -1,14 +1,9 @@
 import React from "react";
 import "./App.css";
-import Situation from "./pages/situation";
+import { Situation, size, status } from "./pages/situation";
 
 function App() {
-  return (
-    <Situation
-      size={Situation.size.large}
-      status={Situation.status.aprovado}
-    ></Situation>
-  );
+  return <Situation size={size.large} status={status.aprovado}></Situation>;
 }
 
 export default App;
